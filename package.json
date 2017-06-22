@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"test":"mocha"
+	"test":"mocha",
+  "full-test":"NODE_ENV=test mocha"
   },
   "author": "Staszek Olejnik",
   "license": "ISC",
