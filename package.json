@@ -1,11 +1,11 @@
 {
-  "name": "z1",
+  "name": "z2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "karma start karma.conf.js",
-    "full-test": "NODE_ENV=test karma start karma.conf.js"
+	"test":"mocha",
+  "full-test":"NODE_ENV=test mocha"
   },
   "author": "Staszek Olejnik",
   "license": "ISC",
