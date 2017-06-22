@@ -1,5 +1,7 @@
 rem git checkout -b
 
+rem git branch master
+
 rem git merge --no-ff -e -m " - 
 
-rem git checkout -d
+rem git branch -d
