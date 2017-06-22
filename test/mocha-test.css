@@ -1,0 +1,27 @@
+body {
+	background-color: #DCECF7;
+}
+
+#mocha .title-page{
+	text-transform: uppercase;
+	color: #5E3434;
+	font-weight: bold;
+}
+
+#mocha h2{
+	font-weight: bold;
+	color: #6C1717;
+}
+
+.navigation{
+	position:absolute;
+	width:100%;
+	height: 44.66px;
+	top:15px;
+}
+
+.navigation-sub{
+	position:fixed;
+	background-color: #6FFBD8;
+
+}
