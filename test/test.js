@@ -14,28 +14,35 @@ describe('Array', function() {
   });
 });
 
-var jednTest ='km' ;
+var jednTest ='km',
+	isObject = typeof przelicznikNaMetr === 'object';
 
 
 describe ('tabela jednostek',function(){
 	describe('miary',function(){
-		it('czy jednostka "'+jednTest+'" jest w tabeli: ['+tabJedn+']',function(){
+		it('czy : jednostka "'+jednTest+'" jest w tabeli: ['+tabJedn+']',function(){
 			//assert.isTrue(tabJedn.indexOf('km'));
 			assert.isAtLeast(tabJedn.indexOf(jednTest), -1, 'jednostka jest w tabeli');
+		});
+		it('czy : ['+tabJedn+'] jest tabelą',function(){
+			assert(Array.isArray(tabJedn), 'tabJedn - jest tabelą');
+		});
+		it('czy : '+przelicznikNaMetr+' jest obiektem',function(){
+			assert.isTrue(isObject, 'tabJedn - jest tabelą');
 		});
 	});
 });
 
 
-var len = przelicznikNaMetr.length;
+var len = Object.keys(przelicznikNaMetr).length;
 
 describe('obiekt z przelicznikem miar na 1 metr',function(){
 	it('reakcja na pustą miare',function(){
-		var miara = '';
+		var miara = ' ';
 		assert.isNaN(przelicznikNaMetr[miara],'brak jednostki');
 	});
 	it('czy ma 5 elementów? = '+len,function(){
-		assert.equal(5, 5, 'mamy 5 typów jednostek');
+		assert.equal(len, 5, 'mamy 5 typów jednostek');
 		
 	});
 });
