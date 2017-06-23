@@ -8,6 +8,7 @@ var assert = chai.assert,
 
 var jednTest ='dm',
 	isObject = typeof przelicznikNaMetr === 'object',
+	isObjectW = typeof Wskaznik === 'function',
 	len = Object.keys(przelicznikNaMetr).length,
 	wynik = przelicznikNaMetr[jednTest];
 
@@ -41,7 +42,7 @@ describe('test obiektu "przelicznikNaMetr"',function(){
 		assert.isTrue(isObject, 'tabJedn - jest tabelą');
 	});
 
-	it('reakcja na pustą miare',function(){
+	it('reakcja na pustą miarę',function(){
 		var miara = ' ';
 		assert.isNaN(przelicznikNaMetr[miara],'brak jednostki');
 	});
@@ -61,9 +62,14 @@ var wsk_test = new Wskaznik('dm','cm'),
 
 
 describe('test obiektu "Wskaznik"',function(){
-	it('test',function(){
+	it('czy : "Wskaznik" jest funkcją',function(){
+		assert.isTrue(isObjectW, 'tabJedn - jest tabelą');
+	});
+
+
+	it('porównanie wartości zwracanego obiektu',function(){
 		assert.equal(wsk_test.znajdzWskaznik().poczatek,w_test.poczatek);
 		assert.equal(wsk_test.znajdzWskaznik().koniec,w_test.koniec);
-
 	});
+
 });
