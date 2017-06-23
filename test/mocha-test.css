@@ -4,9 +4,14 @@ body {
 
 #mocha h1 {
 	text-transform: uppercase;
-	color: #A34040;
+	color: #874FB7;
 	font-weight: bold;
-	font-size: 26px;
+	font-size: 20px;
+}
+
+#mocha .title-page{
+	font-size: 36px;
+	color: #0C7C29;
 }
 
 #mocha h2{
@@ -15,7 +20,7 @@ body {
 }
 
 #mocha .test h2 {
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .title-page {
