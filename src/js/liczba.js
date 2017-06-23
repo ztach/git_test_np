@@ -1,17 +1,16 @@
 var zJedn = 'cm',
 	naJedn = 'mm';
 
-var tabJedn=['km','m','dcm','cm','mm'];
+var tabJedn=['km','m','dm','cm','mm'];
 
 var przelicznikNaMetr = {
 	'km':1000,
 	'm':1,
-	'dcm':0.1,
+	'dm':0.1,
 	'cm':0.01,
 	'mm':0.001
 };
-
-console.log(przelicznikNaMetr['km']);
+ 
 
 var Wskaznik = function (x,y){
 	this.x = x;
@@ -32,7 +31,8 @@ var wsk = new Wskaznik(zJedn,naJedn),
  	nna = wsk.znajdzWskaznik().koniec,
  	wwsk = 1;
 
-console.log(wsk.znajdzWskaznik().poczatek,wsk.znajdzWskaznik().koniec);
+var wsk_test = new Wskaznik('dm','cm');
+
 
 var Obliczenie = function(z,na,wsk) {
 	this.z = z;
